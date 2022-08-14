@@ -27,18 +27,26 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('toan, van anh')),
-        body: Container(
-            color: Colors.yellowAccent,
-            child: Column(children: [
-              Expanded(
-                  child: Container(
-                      color: Colors.yellowAccent,
-                      child: Text('1',
-                          style: TextStyle(
-                              fontSize: 50,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.red))))
-            ])));
+      appBar: AppBar(title: Text('toan, van anh 123')),
+      body: Container(
+        color: Colors.yellowAccent,
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                color: Colors.blue,
+                child: Text(
+                  'HOANG CONG THUAN',
+                  style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.green),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
