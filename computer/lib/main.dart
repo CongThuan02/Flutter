@@ -25,9 +25,10 @@ class _HomePageState extends State<HomePage> {
   late int first, second;
   late String opp;
   late String result = '0', text = "";
+  late double a, b, c, x1, x2;
   void btnClicked(String btnText) {
     if (btnText == 'clear') {
-      result = '0';
+      result = '';
       text = "";
       first = 0;
       second = 0;
