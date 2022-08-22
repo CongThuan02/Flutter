@@ -1,65 +1,21 @@
+import 'package:app1/screens/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(SportifyApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class SportifyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("AppBar Title"),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.file_upload),
-            onPressed: () => {print("Click on upload button")},
-          ),
-          IconButton(
-              icon: Icon(Icons.settings),
-              onPressed: () => {print("Click on settings button")}),
-          PopupMenuButton(
-            icon: Icon(Icons.share),
-            itemBuilder: (context) => [
-              PopupMenuItem(
-                value: 1,
-                child: Text("Facebook"),
-              ),
-              PopupMenuItem(
-                value: 2,
-                child: Text("Instagram"),
-              ),
-            ],
-          )
-        ],
-        leading: IconButton(
-          icon: Icon(Icons.notifications_active),
-          onPressed: () {
-            showAlert(context);
-          },
-        ),
-      ),
-      body: Center(
-        child: Text("Hello World."),
-      ),
-    );
-  }
-
-  void showAlert(BuildContext context) {
-    showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-              content: Text("Hi"),
-            ));
+      return ScreenUtilInit() {
+        builder: ()=> MaterialApp(){
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(primaryColor: Colors.black),
+          home: HomePage(),
+        }
+      };
+   
   }
 }
