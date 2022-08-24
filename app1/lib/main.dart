@@ -1,6 +1,6 @@
 
-import 'package:app1/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_db_app/src/ui/home_screen.dart';
 
 void main() {
   runApp(SportifyApp());
@@ -9,9 +9,10 @@ void main() {
 class SportifyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    debugShowCheckedModeBanner: false;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: HomeScreen(),
     );
   }
 }
