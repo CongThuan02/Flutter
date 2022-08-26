@@ -25,19 +25,22 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           bottom: TabBar(
             tabs: [
               Tab(
-                icon: Icon(Icons.directions_car),
+                icon: Icon(Icons.call),
               ),
               Tab(
                 icon: Icon(Icons.directions_transit),
               ),
               Tab(
-                icon: Icon(Icons.directions_bike),
+                icon: Icon(Icons.directions_car),
+              ),
+              Tab(
+                icon: Icon(Icons.directions_car_filled),
               ),
             ],
           ),
@@ -46,14 +49,17 @@ class MyHomePage extends StatelessWidget {
         body: TabBarView(
           children: [
             Center(
-              child: Text("Car"),
+              child: Text("call"),
             ),
             Center(
               child: Text("Transit"),
             ),
             Center(
               child: Text("Bike"),
-            )
+            ),
+            Center(
+              child: Text("car_filled"),
+            ),
           ],
         ),
       ),
