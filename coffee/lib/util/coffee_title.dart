@@ -12,7 +12,7 @@ class CoffeeTitle extends StatelessWidget {
       ),
       child: Container(
         padding: EdgeInsets.all(12),
-        width: 140,
+        width: 250,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color: Colors.black54,
@@ -22,7 +22,7 @@ class CoffeeTitle extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.asset("lib/images/latte.png", width: 100),
+              child: Image.asset("lib/images/latte.png"),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),

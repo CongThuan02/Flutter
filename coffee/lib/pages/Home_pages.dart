@@ -69,6 +69,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           SizedBox(height: 25),
+          Container(height: 20, color: Colors.grey),
           Expanded(
             child: ListView(
               scrollDirection: Axis.horizontal,
