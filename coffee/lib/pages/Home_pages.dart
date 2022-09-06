@@ -15,6 +15,11 @@ class _HomePageState extends State<HomePage> {
     ['Capuchino', true],
     ['latte', false],
     ['tea', false],
+    ['tea1', false],
+    ['tea2', false],
+    ['tea3', false],
+    ['tea4', false],
+    ['tea5', false],
   ];
   void coffeeTypeSelected(int index) {
     setState(() {
@@ -30,31 +35,23 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
+        title: Text("is clone"),
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leading: Icon(Icons.menu),
-        actions: [
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 15.0),
+          child: IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () {
+                // Do something.
+              }),
+        ),
+        actions: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(
-              right: 20,
-            ),
-            child: Icon(Icons.person),
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: '',
+            padding: const EdgeInsets.only(right: 10.0),
+            child: IconButton(
+                icon: Icon(Icons.settings),
+                onPressed: () => {print("Click on settings button")}),
           ),
         ],
       ),
@@ -91,36 +88,62 @@ class _HomePageState extends State<HomePage> {
                 scrollDirection: Axis.horizontal,
                 itemCount: coffeeTypes.length,
                 itemBuilder: (context, index) {
-                  return CoffeeType(
-                      coffeeType: coffeeTypes[index][0],
-                      isSelected: coffeeTypes[index][1],
-                      onTap: () {
-                        coffeeTypeSelected(index);
-                      });
+                  return Padding(
+                    padding: const EdgeInsets.only(top: 5.0),
+                    child: CoffeeType(
+                        coffeeType: coffeeTypes[index][0],
+                        isSelected: coffeeTypes[index][1],
+                        onTap: () {
+                          coffeeTypeSelected(index);
+                        }),
+                  );
                 }),
 
             // color: Colors.red,
           ),
           Expanded(
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                CoffeeTitle(
-                  coffeeImagePath: "lib/images/latte.png",
-                  coffeeName: "hehe",
-                  coffeePrice: '4.00',
-                ),
-                CoffeeTitle(
-                  coffeeImagePath: "lib/images/caffee.png",
-                  coffeeName: "hehe",
-                  coffeePrice: '4.00',
-                ),
-                CoffeeTitle(
-                  coffeeImagePath: "lib/images/milk.png",
-                  coffeeName: "hehe",
-                  coffeePrice: '4.00',
-                ),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.only(right: 25),
+              child: ListView(
+                scrollDirection: Axis.vertical, // horizontal xep theo cot
+                children: [
+                  CoffeeTitle(
+                    coffeeImagePath: "lib/images/latte.png",
+                    coffeeName: "hehe",
+                    coffeePrice: '4.00',
+                  ),
+                  CoffeeTitle(
+                    coffeeImagePath: "lib/images/caffee.png",
+                    coffeeName: "hehe",
+                    coffeePrice: '4.00',
+                  ),
+                  CoffeeTitle(
+                    coffeeImagePath: "lib/images/milk.png",
+                    coffeeName: "hehe",
+                    coffeePrice: '4.00',
+                  ),
+                  CoffeeTitle(
+                    coffeeImagePath: "lib/images/milk.png",
+                    coffeeName: "hehe",
+                    coffeePrice: '4.00',
+                  ),
+                  CoffeeTitle(
+                    coffeeImagePath: "lib/images/milk.png",
+                    coffeeName: "hehe",
+                    coffeePrice: '4.00',
+                  ),
+                  CoffeeTitle(
+                    coffeeImagePath: "lib/images/milk.png",
+                    coffeeName: "hehe",
+                    coffeePrice: '4.00',
+                  ),
+                  CoffeeTitle(
+                    coffeeImagePath: "lib/images/milk.png",
+                    coffeeName: "hehe",
+                    coffeePrice: '4.00',
+                  ),
+                ],
+              ),
             ),
           ),
         ],
