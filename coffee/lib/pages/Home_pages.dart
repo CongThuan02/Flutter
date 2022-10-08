@@ -80,6 +80,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+           Demo(),
           SizedBox(height: 25),
           Container(
             height: 50,
@@ -101,52 +102,8 @@ class _HomePageState extends State<HomePage> {
 
             // color: Colors.red,
           ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(right: 25),
-              child: ListView(
-                scrollDirection: Axis.vertical, // horizontal xep theo cot
-                children: [
-                  CoffeeTitle(
-                    coffeeImagePath: "lib/images/latte.png",
-                    coffeeName: "hehe",
-                    coffeePrice: '4.00',
-                  ),
-                  CoffeeTitle(
-                    coffeeImagePath: "lib/images/caffee.png",
-                    coffeeName: "hehe",
-                    coffeePrice: '4.00',
-                  ),
-                  CoffeeTitle(
-                    coffeeImagePath: "lib/images/milk.png",
-                    coffeeName: "hehe",
-                    coffeePrice: '4.00',
-                  ),
-                  CoffeeTitle(
-                    coffeeImagePath: "lib/images/milk.png",
-                    coffeeName: "hehe",
-                    coffeePrice: '4.00',
-                  ),
-                  CoffeeTitle(
-                    coffeeImagePath: "lib/images/milk.png",
-                    coffeeName: "hehe",
-                    coffeePrice: '4.00',
-                  ),
-                  CoffeeTitle(
-                    coffeeImagePath: "lib/images/milk.png",
-                    coffeeName: "hehe",
-                    coffeePrice: '4.00',
-                  ),
-                  CoffeeTitle(
-                    coffeeImagePath: "lib/images/milk.png",
-                    coffeeName: "hehe",
-                    coffeePrice: '4.00',
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
+          Demo()
+        ]
       ),
     );
   }
